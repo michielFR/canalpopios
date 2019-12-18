@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func MeldAanClicked(){
         
-        APIController.shared.login(Login(username: gebruikersnaamTextField.text!, password: wachtwoordTextField.text!)){
+        APIService.shared.login(Login(username: gebruikersnaamTextField.text!, password: wachtwoordTextField.text!)){
             (statusCode) in
             if statusCode != nil && statusCode != 400 {
                 DispatchQueue.main.async {

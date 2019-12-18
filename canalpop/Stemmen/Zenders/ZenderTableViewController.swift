@@ -18,13 +18,9 @@ class ZenderTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        APIController.shared.fetchZenders{
-            (zenders) in
-            if let zenders = zenders {
-                print("zenders normaal gevuld")
-                self.zenders = zenders
-                DispatchQueue.main.async { self.tableView.reloadData() }
-            }
+        CanalPopController.shared.fetchZenders { (zenders) in
+            self.zenders = zenders
+            DispatchQueue.main.async { self.tableView.reloadData() }
         }
     }
 

@@ -19,12 +19,9 @@ class MyPopViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        APIController.shared.fetchPopulaireZendersGebruiker{
-            (popzenders) in
-            if let popzenders = popzenders {
-                self.zenders = popzenders
-                self.setupPieChart()
-            }
+        CanalPopController.shared.fetchPopulaireZendersGebruiker { (popzenders) in
+            self.zenders = popzenders
+            self.setupPieChart()
         }
     }
     

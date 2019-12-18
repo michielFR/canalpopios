@@ -11,6 +11,9 @@
 		B40F50892371679A0075BF2E /* DetailProgrammaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40F50882371679A0075BF2E /* DetailProgrammaViewController.swift */; };
 		B42575822371B0B3002F85C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42575812371B0B3002F85C2 /* LoginViewController.swift */; };
 		B48C7B1F239F87EA001332B9 /* RatingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C7B1E239F87EA001332B9 /* RatingDTO.swift */; };
+		B49B560223AA1BF600629526 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B560123AA1BF600629526 /* Repository.swift */; };
+		B49B560423AA246400629526 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B560323AA246400629526 /* Reachability.swift */; };
+		B49B560723AA274A00629526 /* CanalPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B560623AA274A00629526 /* CanalPopController.swift */; };
 		B49BD0D623685FA3002CD987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BD0D523685FA3002CD987 /* AppDelegate.swift */; };
 		B49BD0D823685FA3002CD987 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BD0D723685FA3002CD987 /* SceneDelegate.swift */; };
 		B49BD0DD23685FA3002CD987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49BD0DB23685FA3002CD987 /* Main.storyboard */; };
@@ -26,7 +29,7 @@
 		B49BD0F92368B5D5002CD987 /* ProgrammaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BD0F82368B5D5002CD987 /* ProgrammaTableViewController.swift */; };
 		B4A58C19239AED44008DBB7C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A58C18239AED44008DBB7C /* Login.swift */; };
 		B4DE1BC7237183920033FCDB /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DE1BC6237183920033FCDB /* PersonViewController.swift */; };
-		B4E610732383F3C900B97E86 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E610722383F3C900B97E86 /* APIController.swift */; };
+		B4E610732383F3C900B97E86 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E610722383F3C900B97E86 /* APIService.swift */; };
 		B4E6107523840D8E00B97E86 /* PopZender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6107423840D8E00B97E86 /* PopZender.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		B40F50882371679A0075BF2E /* DetailProgrammaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProgrammaViewController.swift; sourceTree = "<group>"; };
 		B42575812371B0B3002F85C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B48C7B1E239F87EA001332B9 /* RatingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDTO.swift; sourceTree = "<group>"; };
+		B49B560123AA1BF600629526 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B49B560323AA246400629526 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B49B560623AA274A00629526 /* CanalPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanalPopController.swift; sourceTree = "<group>"; };
 		B49BD0D223685FA3002CD987 /* canalpop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = canalpop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49BD0D523685FA3002CD987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B49BD0D723685FA3002CD987 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +58,7 @@
 		B49BD0F82368B5D5002CD987 /* ProgrammaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaTableViewController.swift; sourceTree = "<group>"; };
 		B4A58C18239AED44008DBB7C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B4DE1BC6237183920033FCDB /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
-		B4E610722383F3C900B97E86 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		B4E610722383F3C900B97E86 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B4E6107423840D8E00B97E86 /* PopZender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopZender.swift; sourceTree = "<group>"; };
 		C8A23EC2268054CCF5CCAAE0 /* Pods_canalpop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_canalpop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7605EC4E0D99B1D0DC677EC /* Pods-canalpop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-canalpop.debug.xcconfig"; path = "Target Support Files/Pods-canalpop/Pods-canalpop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +157,22 @@
 			path = ProgrammaDetail;
 			sourceTree = "<group>";
 		};
+		B49B560023AA1BBF00629526 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B49B560123AA1BF600629526 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B49B560523AA255800629526 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B4E610722383F3C900B97E86 /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B49BD0C923685FA3002CD987 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +197,8 @@
 				B49BD0D523685FA3002CD987 /* AppDelegate.swift */,
 				B49BD0D723685FA3002CD987 /* SceneDelegate.swift */,
 				B4E610712383EF7E00B97E86 /* Controllers */,
+				B49B560523AA255800629526 /* Service */,
+				B49B560023AA1BBF00629526 /* Repository */,
 				B40F508523715FDE0075BF2E /* Domein */,
 				B40F508323715FB10075BF2E /* Pop */,
 				B40F508223715F7A0075BF2E /* Stemmen */,
@@ -185,6 +209,7 @@
 				B49BD0E023685FAD002CD987 /* LaunchScreen.storyboard */,
 				B49BD0E323685FAD002CD987 /* Info.plist */,
 				B49BD0DE23685FAD002CD987 /* Assets.xcassets */,
+				B49B560323AA246400629526 /* Reachability.swift */,
 			);
 			path = canalpop;
 			sourceTree = "<group>";
@@ -208,7 +233,7 @@
 		B4E610712383EF7E00B97E86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B4E610722383F3C900B97E86 /* APIController.swift */,
+				B49B560623AA274A00629526 /* CanalPopController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,8 +355,10 @@
 			files = (
 				B49BD0F72368B5BC002CD987 /* ProgrammaTableViewCell.swift in Sources */,
 				B49BD0F32368AB3F002CD987 /* Programma.swift in Sources */,
+				B49B560423AA246400629526 /* Reachability.swift in Sources */,
 				B49BD0EA2368714C002CD987 /* PopViewController.swift in Sources */,
 				B49BD0EF2368AB1A002CD987 /* ZenderTableViewCell.swift in Sources */,
+				B49B560723AA274A00629526 /* CanalPopController.swift in Sources */,
 				B49BD0F12368AB36002CD987 /* Zender.swift in Sources */,
 				B40F50892371679A0075BF2E /* DetailProgrammaViewController.swift in Sources */,
 				B49BD0D623685FA3002CD987 /* AppDelegate.swift in Sources */,
@@ -340,11 +367,12 @@
 				B49BD0F92368B5D5002CD987 /* ProgrammaTableViewController.swift in Sources */,
 				B4E6107523840D8E00B97E86 /* PopZender.swift in Sources */,
 				B49BD0D823685FA3002CD987 /* SceneDelegate.swift in Sources */,
-				B4E610732383F3C900B97E86 /* APIController.swift in Sources */,
+				B4E610732383F3C900B97E86 /* APIService.swift in Sources */,
 				B48C7B1F239F87EA001332B9 /* RatingDTO.swift in Sources */,
 				B42575822371B0B3002F85C2 /* LoginViewController.swift in Sources */,
 				B49BD0F52368ACD1002CD987 /* ZenderTableViewController.swift in Sources */,
 				B4A58C19239AED44008DBB7C /* Login.swift in Sources */,
+				B49B560223AA1BF600629526 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

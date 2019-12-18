@@ -8,9 +8,9 @@
 
 import Foundation
 
-class APIController {
-    static let shared = APIController()
+class APIService {
     
+    static let shared = APIService()
     let baseURL = URL(string: "https://canalpop.azurewebsites.net/api/")!
     
     func fetchPopulaireZenders(completion: @escaping ([PopZender]?) -> Void){

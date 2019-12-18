@@ -20,46 +20,48 @@ class DetailProgrammaViewController: UIViewController {
     @IBOutlet var downButton: UIImageView!
     
     @IBAction func UpButtonClicked(){
-        if programma.rating < 5{
-            programma.rating += 1
-            APIController.shared.rateProgramma(id: programma.id, rating: programma.rating){
-                (ratingDTO) in
-                if let ratingDTO = ratingDTO {
-                    print(ratingDTO)
-                    DispatchQueue.main.async {self.refreshWaardes()}
+        if(Reachability.isConnected()){
+            if programma.rating < 5{
+                programma.rating += 1
+                APIService.shared.rateProgramma(id: programma.id, rating: programma.rating){
+                    (ratingDTO) in
+                    if let ratingDTO = ratingDTO {
+                        print(ratingDTO)
+                        DispatchQueue.main.async {self.refreshWaardes()}
+                    }
                 }
+            } else {
+                showAlert(message: "Ratings gaan van -5 tot 5")
             }
         } else {
-            let alert = UIAlertController(title: "Opgelet", message: "Ratings gaan van -5 tot 5", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Oké", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
+            showAlert(message: "U bent niet verbonden met internet, stemmen is nu niet mogelijk")
         }
+        
     }
     
     @IBAction func DownButtonClicked(){
-        if programma.rating > -5{
-            programma.rating -= 1
-            APIController.shared.rateProgramma(id: programma.id, rating: programma.rating){
-                (ratingDTO) in
-                if let ratingDTO = ratingDTO {
-                    print(ratingDTO)
-                    DispatchQueue.main.async {self.refreshWaardes()}
+        if(Reachability.isConnected()){
+            if programma.rating > -5{
+                programma.rating -= 1
+                APIService.shared.rateProgramma(id: programma.id, rating: programma.rating){
+                    (ratingDTO) in
+                    if let ratingDTO = ratingDTO {
+                        print(ratingDTO)
+                        DispatchQueue.main.async {self.refreshWaardes()}
+                    }
                 }
+            }else {
+                showAlert(message: "Ratings gaan van -5 tot 5")
             }
-        }else {
-            let alert = UIAlertController(title: "Opgelet", message: "Ratings gaan van -5 tot 5", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Oké", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
+        } else {
+            showAlert(message: "U bent niet verbonden met internet, stemmen is nu niet mogelijk")
         }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        APIController.shared.fetchProgrammaRatingGebruiker(programma.id){
+        APIService.shared.fetchProgrammaRatingGebruiker(programma.id){
             (ratings) in
             if let ratings = ratings {
                 print(ratings)
@@ -68,6 +70,7 @@ class DetailProgrammaViewController: UIViewController {
                 }
                 DispatchQueue.main.async {self.refreshWaardes()}
             }
+            DispatchQueue.main.async {self.refreshWaardes()}
         }
         self.title = programma.naam
     }
@@ -77,5 +80,13 @@ class DetailProgrammaViewController: UIViewController {
         progType.text = programma.type
         progOmschrijving.text = programma.omschrijving
         progRating.text = String(programma.rating)
+    }
+    
+    func showAlert(message: String){
+        let alert = UIAlertController(title: "Opgelet", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Oké", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
 }
